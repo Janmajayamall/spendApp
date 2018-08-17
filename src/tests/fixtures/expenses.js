@@ -19,3 +19,13 @@ export default [{
     amount: 1,
     createdAt: moment(0).add(4, 'days').valueOf()
 }];
+
+
+const expenseSingle = [{
+    id: 1,
+    description: 'gum',
+    note:'',
+    amount: 2,
+    createdAt: moment(0).subtract(4, 'days').valueOf()}]
+
+export {expenseSingle}

@@ -2,7 +2,60 @@
 
 exports[`should render dashboard page 1`] = `
 <div>
+  <ExpenseSummaryComponent
+    expenses={
+      Array [
+        Object {
+          "amount": 2,
+          "createdAt": -345600000,
+          "description": "gum",
+          "id": 1,
+          "note": "",
+        },
+        Object {
+          "amount": 0,
+          "createdAt": 0,
+          "description": "cell",
+          "id": 2,
+          "note": "",
+        },
+        Object {
+          "amount": 1,
+          "createdAt": 345600000,
+          "description": "bell",
+          "id": 3,
+          "note": "",
+        },
+      ]
+    }
+  />
   <Connect(ExpenseListFilters) />
-  <Connect(ExpenseList) />
+  <ExpenseList
+    expenses={
+      Array [
+        Object {
+          "amount": 2,
+          "createdAt": -345600000,
+          "description": "gum",
+          "id": 1,
+          "note": "",
+        },
+        Object {
+          "amount": 0,
+          "createdAt": 0,
+          "description": "cell",
+          "id": 2,
+          "note": "",
+        },
+        Object {
+          "amount": 1,
+          "createdAt": 345600000,
+          "description": "bell",
+          "id": 3,
+          "note": "",
+        },
+      ]
+    }
+  />
 </div>
 `;
