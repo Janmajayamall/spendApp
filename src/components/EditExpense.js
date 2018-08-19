@@ -2,7 +2,7 @@ import React from 'react';
 import {BrowserRouter, Route, Switch, Link, NavLink} from 'react-router-dom'
 import {connect} from 'react-redux';
 import ExpenseForm from './ExpenseForm.js';
-import {editExpense, removeExpense} from './../actions/expenses.js'
+import {editExpense, removeExpense, startRemoveExpense} from './../actions/expenses.js'
 
 export class EditExpensePage extends React.Component {
     onSubmit = (expense)=>{
@@ -11,7 +11,7 @@ export class EditExpensePage extends React.Component {
     }
 
     onClick = () =>{
-        this.props.removeExpense(this.props.expense.id);
+        this.props.startRemoveExpense(this.props.expense.id);
         this.props.history.push('/');
     }
     
@@ -39,7 +39,7 @@ const mapStateToProps = (state, props) =>{
 const mapDispatchToProps = (dispatch, props)=>{
     return{
         editExpense: (id, expense) => dispatch(editExpense(id, expense)),
-        removeExpense : (id) => dispatch(removeExpense(id))
+        startRemoveExpense : (id) => dispatch(startRemoveExpense(id))
     }
 }
 
