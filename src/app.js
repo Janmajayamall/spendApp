@@ -11,8 +11,8 @@ import filtersReducer from './reducers/filters.js';
 import getVisibleExpenses from './selectors/expenses.js';
 import { Provider } from 'react-redux';
 import 'react-dates/lib/css/_datepicker.css';
-
-
+import './firebase/firebase';
+import './playground/promise'
 
 
 const store = configureStore();
