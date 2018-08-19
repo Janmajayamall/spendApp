@@ -2,6 +2,10 @@ import selectExpenses from './../../selectors/expenses';
 import moment from 'moment';
 
 import expenses from './../fixtures/expenses';
+import database from './../../firebase/firebase';
+
+
+
 
 test('should filter by text value', ()=>{
     const filters = {
@@ -73,3 +77,4 @@ test('should sort by date', ()=>{
     expect(result).toEqual([expenses[2],expenses[1], expenses[0]]);
 
 });
+

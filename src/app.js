@@ -4,7 +4,7 @@ import './styles/styles.scss';
 import 'normalize.css/normalize.css'
 import AppRouter from './routers/AppRouter.js'
 import configureStore from './store/configureStore.js';
-import {addExpense, editExpense, removeExpense} from './actions/expenses.js';
+import {addExpense, editExpense, removeExpense, startSetExpenses} from './actions/expenses.js';
 import {setEndDate, setStartDate, setTextFilter, sortByAmount, sortByDate} from './actions/filters.js';
 import expensesReducer from './reducers/expenses.js';
 import filtersReducer from './reducers/filters.js';
@@ -25,5 +25,13 @@ const jsx = (
         <AppRouter/>
     </Provider>
 );
-ReactDOM.render(jsx, document.getElementById('app'));
+
+
+ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+
+store.dispatch(startSetExpenses()).then(()=>{
+    ReactDOM.render(jsx, document.getElementById('app'));
+
+});
+
 
