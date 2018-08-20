@@ -2,7 +2,6 @@ import React from 'react';
 import {shallow} from 'enzyme';
 import {ExpenseListFilters} from './../../components/ExpenseListFilters.js';
 import {filters, altFilters} from './../fixtures/filters.js';
-import { wrap } from 'module';
 
 let setTextFilter, sortByDate, sortByAmount, setStartDate, setEndDate, wrapper;
 

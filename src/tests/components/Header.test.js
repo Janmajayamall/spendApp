@@ -1,11 +1,9 @@
 import React from 'react';
-import ReactShallowRenderer from 'react-test-renderer/shallow';
-import Header from './../../components/Header.js';
+import {Header} from './../../components/Header.js';
 import {shallow} from 'enzyme';
-import { wrap } from 'module';
 
 test('should render header correctly', ()=>{
-    const wrapper = shallow(<Header/>);
+    const wrapper = shallow(<Header startLogout={()=>{}} />);
     expect(wrapper).toMatchSnapshot();
     // const renderer = new ReactShallowRenderer();
     // renderer.render(<Header/>);
@@ -13,3 +11,11 @@ test('should render header correctly', ()=>{
     // expect(renderer.getRenderOutput()).toMatchSnapshot();
     
 });
+
+test('should startLogout function properly', ()=>{
+    const startLogout = jest.fn();
+    const wrapper = shallow(<Header startLogout={startLogout} />);
+    expect(wrapper).toMatchSnapshot();
+    wrapper.find('button').simulate('click');
+    expect(startLogout).toHaveBeenCalled(); 
+})
