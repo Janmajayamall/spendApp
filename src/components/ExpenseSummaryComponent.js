@@ -2,6 +2,7 @@ import React from 'react';
 import getTotalExpenses from './../selectors/expensesTotal.js';
 import numeral from 'numeral'
 
+
 export default class ExpenseSummaryComponent extends React.Component{
     render(){
         const expenseSING = this.props.expenses.length === 1 ? 'expense' : 'expenses';
