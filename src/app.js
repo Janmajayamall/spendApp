@@ -12,7 +12,9 @@ import getVisibleExpenses from './selectors/expenses.js';
 import { Provider } from 'react-redux';
 import 'react-dates/lib/css/_datepicker.css';
 import {firebase} from './firebase/firebase';
-import {login, logout} from './actions/auth' 
+import {login, logout} from './actions/auth';
+import Loading from './components/LoadingPage.js';
+
 
 
 
@@ -35,7 +37,7 @@ const renderApp = () => {
 };
 
 
-ReactDOM.render(<p>Loading...</p>, document.getElementById('app'));
+ReactDOM.render(<Loading/>, document.getElementById('app'));
 
 firebase.auth().onAuthStateChanged((user) => {
     if (user) {
