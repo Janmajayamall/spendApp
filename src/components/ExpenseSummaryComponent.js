@@ -12,7 +12,7 @@ export default class ExpenseSummaryComponent extends React.Component{
                 <div className='content-container'>
                     <h1 className='page-header__title'>Viewing <span>{this.props.expenses.length}</span> {expenseSING} totalling <span>{numeral(getTotalExpenses(this.props.expenses)/100).format('$0,0.00')}</span></h1> 
                 <div className='page-header__actions'>
-                    <Link className='button' to='/create' >Add Expense</Link>
+                    <Link className='button' to='/create' >Add Spending</Link>
                 </div>
                 </div>
             </div>

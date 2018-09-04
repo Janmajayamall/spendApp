@@ -91,7 +91,7 @@ export default class ExpenseForm extends React.Component{
                     {this.state.error && <p className='form__error'>{this.state.error}</p>}
                     <input
                         type="text"
-                        placeholder="Description"
+                        placeholder="Description of the spending"
                         autoFocus
                         value = {this.state.description}
                         className = "text-input"
@@ -108,7 +108,7 @@ export default class ExpenseForm extends React.Component{
                     />
                     <textarea
                         className='text-area'
-                        placeholder="If you want to add any notes on the expense, add them here!"
+                        placeholder="Notes related to the spending"
                         value = {this.state.note}
                         onChange={this.onNoteChange}>
                     </textarea>
@@ -122,7 +122,7 @@ export default class ExpenseForm extends React.Component{
                     />
                     <div>
                     <button className='button'>
-                        Add Expense
+                        Add Spending
                     </button>
                     </div>
                 </form>
