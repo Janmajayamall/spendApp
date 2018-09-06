@@ -20,7 +20,7 @@ export const ExpenseList = (props) => (
         {
             props.expenses.length === 0 ?
                 <div className='list-item list-item--message'>
-                    <span>Wohooo! No Spendings!</span>
+                    <span>Wohooo! You did not spend anything!</span>
                 </div>
                 : props.expenses.map((expense)=>{
             return(
